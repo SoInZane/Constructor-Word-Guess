@@ -1,29 +1,27 @@
-function Letter(letter) {
-    this.letter = letter;
-    this.guessedLetter = false;
+// Create the function to use the Letter Constructor
 
+function Letter(value) {
+    this.letter = value;
+    this.guessed = false;
     this.toString = function () {
 
         if (this.letter === " ") {
-            this.guessedLetter = true;
+            this.guessed = true;
             return " ";
-        }
-        else {
-            if (this.guessedLetter === false) {
+        } else {
+            if (this.guessed === false) {
                 return "_";
-            }
-            else {
+            } else {
                 return this.letter;
             }
         }
     };
-
+    
     this.guess = function (guess) {
-
         if (guess === this.letter) {
-            this.guessedLetter = true;
-
+            this.guessed = true;
         }
     }
-}
+};
+
 module.exports = Letter;
