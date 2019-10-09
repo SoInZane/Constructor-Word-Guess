@@ -135,7 +135,7 @@ function restartGame() {
                 incorrectLetters = [];
                 correctLetters = [];
                 guessesLeft = 10;
-                knowledge();
+                information();
             } else {
                 return
             }
